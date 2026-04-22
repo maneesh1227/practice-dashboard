@@ -1,0 +1,15 @@
+<div style="border: 2px solid blue; padding: 10px; margin: 10px;">
+      <h3>TV Set #1 (Summary Card)</h3>
+      <!-- <div *ngFor="let item of (dataService.newsStream$ | async)">
+        <p>Latest Value: <strong>{{ item.value }}</strong></p>
+      </div> -->
+      @for (item of (dataService.newsStream$ | async); track item.id) {
+  <p>Value: {{ item.value | number }}</p>
+}
+    </div>
+
+    <div style="border: 2px solid blue; padding: 10px;">
+  <h3>Remote Control (TV 1)</h3>
+  <!-- <button (click)="dataService.filterNews('Hyderabad')">Show Hyderabad</button>
+  <button (click)="dataService.filterNews('Bangalore')">Show Bangalore</button> -->
+</div>

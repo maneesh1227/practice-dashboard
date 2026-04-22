@@ -1,0 +1,6 @@
+<div style="border: 2px solid blue; padding: 10px; margin: 10px;">
+      <h3>TV Set #2 (Summary Card)</h3>
+      <div *ngFor="let item of (dataService.newsStream$ | async)">
+        <p>Latest Value: <strong>{{ item.value }}</strong></p>
+      </div>
+    </div>

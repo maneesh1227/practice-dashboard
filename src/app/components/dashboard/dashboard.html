@@ -1,0 +1,61 @@
+<!-- <div class="card">
+    @if (plxData$ | async; as data) {
+        <p-table [value]="data">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Category</th>
+                    <th>Value</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-metric>
+                <tr>
+                    <td>{{ metric.category }}</td>
+                    <td>{{ metric.value }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    } @else {
+        <p>Fetching PLX Extracts...</p>
+    }
+</div> -->
+
+<div class="p-4"> 
+  <div class="grid">
+    
+    <div class="col-12 md:col-4 mb-4">
+      <p-card header="Total PLX Records">
+        <h1 class="text-blue-600">1,240</h1>
+        <small>Updated 5 mins ago</small>
+        <p-button label="Check" (onClick)="onClickCheck()" />
+      </p-card>
+    </div>
+
+    <div class="col-12">
+      <p-card header="PLX Extract: User Analytics">
+        <p-table [value]="(plxData$ | async)!" styleClass="p-datatable-striped">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Value</th>
+              <th>Status</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-metric>
+            <tr>
+              <td>{{ metric.id }}</td>
+              <td>{{ metric.category }}</td>
+              <td>{{ metric.value | number }}</td>
+              <td>
+                <span [class]="'customer-badge status-' + metric.status">
+                  {{ metric.status }}
+                </span>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-card>
+    </div>
+
+  </div>
+</div>

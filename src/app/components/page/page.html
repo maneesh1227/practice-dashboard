@@ -1,0 +1,39 @@
+<div class="flex flex-column h-screen">
+  <nav class="bg-blue-600 p-3 text-white flex justify-content-between align-items-center">
+    <div class="font-bold text-xl">PLX Dashboard</div>
+    <div class="flex gap-3">
+      <p-button icon="pi pi-user" styleClass="p-button-rounded p-button-text text-white"></p-button>
+    </div>
+  </nav>
+
+  <div class="flex flex-1 overflow-hidden">
+    <aside class="w-15rem bg-gray-900 text-white p-3 hidden md:block">
+      <ul class="list-none p-0">
+        <li class="mb-3">
+          <a routerLink="/page/dashboard" routerLinkActive="active-link" class="flex align-items-center p-3 text-white no-underline border-round hover:bg-gray-800">
+            <i class="pi pi-home mr-2"></i> Dashboard
+          </a>
+        </li>
+        <li>
+          <a routerLink="/page/analytics" routerLinkActive="active-link" class="flex align-items-center p-3 text-white no-underline border-round hover:bg-gray-800">
+            <i class="pi pi-chart-pie mr-2"></i> Analytics
+          </a>
+        </li>
+        <li>
+          <a routerLink="/page/bar" routerLinkActive="active-link" class="flex align-items-center p-3 text-white no-underline border-round hover:bg-gray-800">
+            <i class="pi pi-chart-bar mr-2"></i> Bar Chart
+          </a>
+        </li>
+        <li>
+          <a routerLink="/page/vbar" routerLinkActive="active-link" class="flex align-items-center p-3 text-white no-underline border-round hover:bg-gray-800">
+            <i class="pi pi-chart-line mr-2"></i> Vertical Bar Chart
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto bg-gray-100">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

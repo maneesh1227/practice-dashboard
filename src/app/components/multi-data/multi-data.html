@@ -1,0 +1,25 @@
+<div class="card shadow-2 p-4">
+    <h3>PLX Data Monitor</h3>
+<p-table [value]="data" [lazy]="true" 
+     (onLazyLoad)="loadData($event)" [scrollable]="true" 
+    scrollHeight="400px" 
+    [virtualScroll]="true" 
+    [virtualScrollItemSize]="46" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Title (PLX Metric)</th>
+            <th>Body (Data Point)</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>
+
+<!-- [loading]="loading$ | async" [paginator]="true" [rows]="5" [totalRecords]="totalRecords" -->

@@ -1,0 +1,16 @@
+<div class="p-4">
+  <p-card header="Global Revenue Analytics">
+    <div class="flex gap-3 mb-4">
+      <div class="flex flex-column">
+        <label class="mb-2 font-bold text-sm">Region</label>
+        <p-select [options]="regions" (onChange)="onRegionChange($event)" placeholder="Select Region"></p-select>
+      </div>
+      <div class="flex flex-column">
+        <label class="mb-2 font-bold text-sm">Category</label>
+        <p-select [options]="categories" (onChange)="onCategoryChange($event)" placeholder="Select Category"></p-select>
+      </div>
+    </div>
+
+    <p-chart type="bar" [data]="chartData" [options]="chartOptions" height="400px"></p-chart>
+  </p-card>
+</div>
