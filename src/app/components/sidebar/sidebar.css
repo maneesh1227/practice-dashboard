@@ -1,0 +1,45 @@
+.drawer-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-color-secondary);
+}
+
+/* Ensure the Font is consistent */
+:host {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Nav Item Styling */
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0 50px 50px 0; /* Google style: Right-rounded active state */
+    cursor: pointer;
+    color: #5f6368;
+    transition: all 0.2s;
+    margin-right: 1rem;
+}
+
+.nav-item:hover {
+    background-color: #f1f3f4;
+    color: #1a73e8;
+}
+
+.nav-item.active {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+/* Modal Backdrop Blur - Very Modern UI */
+:ng-deep .p-component-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+/* Removing default drawer borders for a cleaner look */
+:ng-deep .p-drawer {
+    box-shadow: 20px 0 50px rgba(0,0,0,0.1);
+}
+

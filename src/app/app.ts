@@ -5,10 +5,11 @@ import { Analytics } from './components/analytics/analytics';
 import { Bar } from './components/bar/bar';
 import { TvOneComponent } from './components/tv-one-component/tv-one-component';
 import { TvTwoComponent } from './components/tv-two-component/tv-two-component';
+import { Sidebar } from './components/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink, Dashboard, Analytics, Bar, TvOneComponent, TvTwoComponent],
+  imports: [RouterOutlet,RouterLink, Dashboard, Analytics, Bar, TvOneComponent, TvTwoComponent, Sidebar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

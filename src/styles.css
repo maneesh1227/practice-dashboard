@@ -1,7 +1,23 @@
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+} */
+/* PrimeNG font fix */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+/* smoother look */
+* {
+  box-sizing: border-box;
+}
+
+.drawer-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-color-secondary);
 }
